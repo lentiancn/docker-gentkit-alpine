@@ -16,7 +16,7 @@ gentkit/alpine:latest
 ## Exec into the container
 
 ```shell
-# View container status. First run sudo docker start <your_container_name_or_your_container_id> if its status is not Up.
+# View container status. First run [sudo docker start <your_container_name_or_your_container_id>] if its status is not Up.
 $ sudo docker ps -a --filter "name=<your_container_name>"
 
 $ sudo docker exec -it <your_container_name or your_container_id> /bin/sh
