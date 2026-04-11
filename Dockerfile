@@ -3,7 +3,7 @@
 #
 # https://github.com/lentiancn/dockerhub-gentkit-alpine/blob/main/LICENSE
 #
-ARG IMAGE_VERSION
+ARG IMAGE_VERSION=latest
 ARG IMAGE_BUILD_DATE
 
 FROM alpine:${IMAGE_VERSION}
