@@ -3,10 +3,10 @@
 #
 # https://github.com/lentiancn/dockerhub-gentkit-alpine/blob/main/LICENSE
 #
-ARG ALPINE_VERSION
+ARG ALPINEVERSION
 ARG IMAGE_BUILD_DATE
 
-FROM alpine:$ALPINE_VERSION
+FROM alpine:${ALPINEVERSION}
 
 LABEL maintainer="Len <lentiancn@126.com>" \
       description="A Docker image based on the 'alpine' base image." \
@@ -15,14 +15,14 @@ LABEL maintainer="Len <lentiancn@126.com>" \
       org.opencontainers.image.vendor="GentKit" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
-      org.opencontainers.image.version="${ALPINE_VERSION}" \
+      org.opencontainers.image.version="${ALPINEVERSION}" \
       org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
 
 RUN set -eu && \
     ALPINE_VERSION=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2) && \
     echo -e "\
 Welcome to Alpine Linux on Docker!\n\
-Alpine Version: ${ALPINE_VERSION}" > /etc/motd && \
+Alpine Version: ${ALPINEVERSION}" > /etc/motd && \
     apk update --no-cache && \
     apk upgrade --no-cache && \
     rm -rf /var/cache/apk/* \
