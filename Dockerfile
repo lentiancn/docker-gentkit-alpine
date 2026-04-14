@@ -27,11 +27,6 @@ LABEL maintainer="Len <lentiancn@126.com>" \
 
 # Optimize system
 RUN set -eu && \
-    # Extract Alpine Version from os-release and set welcome message
-    ALPINE_VERSION=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2) && \
-    echo -e "\
-Welcome to Alpine Linux on Docker!\n\
-Alpine Version: ${ALPINE_VERSION}" > /etc/motd && \
     # Update package index without caching
     apk update --no-cache && \
     # Upgrade all installed packages to latest versions without caching
@@ -43,7 +38,11 @@ Alpine Version: ${ALPINE_VERSION}" > /etc/motd && \
         /root/.cache \
         /usr/share/man \
         /usr/share/doc \
-        /usr/share/info
+        /usr/share/info && \
+    # Reset welcome message
+    ALPINE_ACTUAL_VERSION=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2) && \
+    echo -e "\
+Welcome to Alpine Linux ${ALPINE_ACTUAL_VERSION} on Docker !" > /etc/motd
 
 # Set the working directory to /root for subsequent instructions
 WORKDIR /root
