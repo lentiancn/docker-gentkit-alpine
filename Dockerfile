@@ -4,17 +4,25 @@
 # https://github.com/lentiancn/docker-gentkit-alpine/blob/main/LICENSE
 #
 
+#
 # If it is "unknown", cause the 'alpine' base image to fail the build to ensure the correct version is referenced.
+#
 ARG IMAGE_VERSION="unknown"
 
+#
 # Use 'alpine' as the base image with specified version
+#
 FROM alpine:${IMAGE_VERSION}
 
+#
 # Define build arguments for image metadata
+#
 ARG IMAGE_VERSION="unknown"
 ARG IMAGE_BUILD_DATE="unknown"
 
+#
 # Image metadata labels following OCI Image Format Specification
+#
 LABEL maintainer="Len <lentiancn@126.com>" \
       description="A Docker image based on the 'alpine' base image." \
       org.opencontainers.image.title="Alpine Linux on Docker" \
@@ -25,7 +33,9 @@ LABEL maintainer="Len <lentiancn@126.com>" \
       org.opencontainers.image.version="${IMAGE_VERSION}" \
       org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
 
+#
 # Optimize system
+#
 RUN set -eu && \
     # Update package index without caching
     apk update --no-cache && \
@@ -44,5 +54,7 @@ RUN set -eu && \
     echo -e "\
 Welcome to Alpine Linux ${ALPINE_ACTUAL_VERSION} on Docker !" > /etc/motd
 
+#
 # Set the working directory to /root for subsequent instructions
+#
 WORKDIR /root
