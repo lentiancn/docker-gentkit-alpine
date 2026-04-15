@@ -5,33 +5,19 @@
 #
 
 #
-# If it is "unknown", cause the 'alpine' base image to fail the build to ensure the correct version is referenced.
+# The base image
 #
-ARG IMAGE_VERSION="unknown"
+FROM scratch AS builder
 
 #
-# Use 'alpine' as the base image with specified version
+# Define build arguments
 #
-FROM alpine:${IMAGE_VERSION}
+ARG ARCHITECTURE="unknown"
 
 #
-# Define build arguments for image metadata
+# Extract files to the root directory
 #
-ARG IMAGE_VERSION="unknown"
-ARG IMAGE_BUILD_DATE="unknown"
-
-#
-# Image metadata labels following OCI Image Format Specification
-#
-LABEL maintainer="Len <lentiancn@126.com>" \
-      description="A Docker image based on the 'alpine' base image." \
-      org.opencontainers.image.title="Alpine Linux on Docker" \
-      org.opencontainers.image.description="A Docker image based on the 'alpine' base image." \
-      org.opencontainers.image.vendor="GentKit" \
-      org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
-      org.opencontainers.image.version="${IMAGE_VERSION}" \
-      org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
+ADD releases/${ARCHITECTURE}/alpine-minirootfs-3.23.4-${ARCHITECTURE}.tar.gz /
 
 #
 # Optimize system
@@ -53,6 +39,31 @@ RUN set -eu && \
     ALPINE_ACTUAL_VERSION=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2) && \
     echo -e "\
 Welcome to Alpine Linux ${ALPINE_ACTUAL_VERSION} on Docker !" > /etc/motd
+
+FROM scratch AS production
+
+#
+# Define build arguments for image metadata
+#
+ARG IMAGE_BUILD_DATE="unknown"
+
+#
+# Image metadata labels following OCI Image Format Specification
+#
+LABEL maintainer="Len <lentiancn@126.com>" \
+      description="A Docker image based on Alpine Linux." \
+      org.opencontainers.image.title="Alpine Linux on Docker" \
+      org.opencontainers.image.description="A Docker image based on Alpine Linux." \
+      org.opencontainers.image.vendor="GentKit" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
+      org.opencontainers.image.version="3.23.4" \
+      org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
+
+#
+# Copy resources
+#
+COPY --from=builder / /
 
 #
 # Set the working directory to /root for subsequent instructions
