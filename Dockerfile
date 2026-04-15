@@ -71,3 +71,8 @@ COPY --from=builder / /
 # Set the working directory to /root for subsequent instructions
 #
 WORKDIR /root
+
+#
+# Set the default command to execute when running the image
+#
+CMD ["/bin/sh"]
