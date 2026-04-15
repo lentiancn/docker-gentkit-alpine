@@ -12,12 +12,13 @@ FROM scratch AS builder
 #
 # Define build arguments
 #
+ARG IMAGE_TAG="unknown"
 ARG ARCHITECTURE="unknown"
 
 #
 # Extract files to the root directory
 #
-ADD releases/${ARCHITECTURE}/alpine-minirootfs-3.23.4-${ARCHITECTURE}.tar.gz /
+ADD releases/${ARCHITECTURE}/alpine-minirootfs-${IMAGE_TAG}-${ARCHITECTURE}.tar.gz /
 
 #
 # Optimize system
@@ -45,6 +46,7 @@ FROM scratch AS production
 #
 # Define build arguments for image metadata
 #
+ARG IMAGE_TAG="unknown"
 ARG IMAGE_BUILD_DATE="unknown"
 
 #
@@ -57,7 +59,7 @@ LABEL maintainer="Len <lentiancn@126.com>" \
       org.opencontainers.image.vendor="GentKit" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
-      org.opencontainers.image.version="3.23.4" \
+      org.opencontainers.image.version="${IMAGE_TAG}" \
       org.opencontainers.image.created="${IMAGE_BUILD_DATE}"
 
 #
