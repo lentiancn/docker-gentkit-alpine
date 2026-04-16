@@ -26,11 +26,3 @@ $ sudo docker exec -it <your_container_name or your_container_id> /bin/sh
 
 **gentkit/alpine** is licensed under
 the [MIT License](LICENSE) .
-
-## Appendix
-
-### Source
-
-https://github.com/lentiancn/docker-gentkit-alpine (**on** GitHub)
-
-https://gitee.com/lentiancn/docker-gentkit-alpine (**on** Gitee)
