@@ -3,7 +3,7 @@
 [![MIT License](https://img.shields.io/github/license/lentiancn/docker-gentkit-alpine?style=flat-square)](LICENSE)
 [![GitHub Release](https://img.shields.io/github/tag/lentiancn/docker-gentkit-alpine.svg?label=release)](https://github.com/lentiancn/docker-gentkit-alpine/releases)
 
-A project for building Docker image based on the 'alpine' base image.
+A project for building Docker image based on Alpine Linux.
 
 ## Pull and run into a new container
 
