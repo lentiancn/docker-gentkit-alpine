@@ -26,8 +26,6 @@ ADD releases/${ARCHITECTURE}/alpine-minirootfs-${ALPINE_IMAGE_VERSION}-${ARCHITE
 RUN set -eu && \
     # Update package index without caching \
     apk update --no-cache && \
-    # Upgrade all installed packages to latest versions without caching \
-    apk upgrade --no-cache && \
     # Clean up cache files and unnecessary documentation to reduce image size \
     rm -rf /var/cache/apk/* \
         /tmp/* \
@@ -47,20 +45,17 @@ FROM scratch AS production
 # Define build arguments for image metadata
 #
 ARG ALPINE_IMAGE_VERSION="unknown"
-ARG ALPINE_IMAGE_BUILD_DATE="unknown"
 
 #
 # Image metadata labels following OCI Image Format Specification
 #
-LABEL maintainer="Len <lentiancn@126.com>" \
-      description="A Docker image based on Alpine Linux." \
-      org.opencontainers.image.title="Alpine Linux on Docker" \
+LABEL org.opencontainers.image.title="Alpine Linux on Docker" \
       org.opencontainers.image.description="A Docker image based on Alpine Linux." \
       org.opencontainers.image.vendor="GentKit" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
       org.opencontainers.image.version="${ALPINE_IMAGE_VERSION}" \
-      org.opencontainers.image.created="${ALPINE_IMAGE_BUILD_DATE}"
+      org.opencontainers.image.created="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
 #
 # Copy resources
