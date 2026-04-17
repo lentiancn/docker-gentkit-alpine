@@ -12,13 +12,12 @@ FROM scratch AS builder
 #
 # Define build arguments
 #
-ARG ALPINE_IMAGE_VERSION="unknown"
-ARG ARCHITECTURE="unknown"
+ARG ALPINE_RELEASE_FILE="unknown"
 
 #
 # Extract files to the root directory
 #
-ADD releases/${ARCHITECTURE}/alpine-minirootfs-${ALPINE_IMAGE_VERSION}-${ARCHITECTURE}.tar.gz /
+ADD releases/${ALPINE_RELEASE_FILE} /
 
 #
 # Optimize system
@@ -35,16 +34,11 @@ RUN set -eu && \
         /usr/share/doc \
         /usr/share/info && \
     # Reset welcome message \
-    ALPINE_ACTUAL_VERSION=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2) && \
+    ALPINE_VERSION=$(grep VERSION_ID /etc/os-release | cut -d'=' -f2) && \
     echo -e "\
-Welcome to Alpine Linux ${ALPINE_ACTUAL_VERSION} on Docker !" > /etc/motd
+Welcome to Alpine Linux ${ALPINE_VERSION} on Docker !" > /etc/motd
 
 FROM scratch AS production
-
-#
-# Define build arguments for image metadata
-#
-ARG ALPINE_IMAGE_VERSION="unknown"
 
 #
 # Image metadata labels following OCI Image Format Specification
@@ -54,7 +48,7 @@ LABEL org.opencontainers.image.title="Alpine Linux on Docker" \
       org.opencontainers.image.vendor="GentKit" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
-      org.opencontainers.image.version="${ALPINE_IMAGE_VERSION}" \
+      org.opencontainers.image.version="3.23.4" \
       org.opencontainers.image.created="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
 #
