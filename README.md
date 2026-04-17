@@ -1,7 +1,7 @@
 # Alpine Linux on Docker
 
-[![MIT License](https://img.shields.io/github/license/lentiancn/docker-gentkit-alpine?style=flat-square)](LICENSE)
-[![GitHub Release](https://img.shields.io/github/tag/lentiancn/docker-gentkit-alpine.svg?label=release)](https://github.com/lentiancn/docker-gentkit-alpine/releases)
+[![MIT License](https://img.shields.io/github/license/lentiancn/docker-gentkit-alpine.svg?style=flat-square&label=license)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/tag/lentiancn/docker-gentkit-alpine.svg?style=flat-square&label=release)](https://github.com/lentiancn/docker-gentkit-alpine/releases)
 
 A project for building Docker image based on Alpine Linux.
 
@@ -13,7 +13,7 @@ $ sudo docker run -it \
 gentkit/alpine:latest
 ```
 
-## Exec into the container
+## Exec into a running container
 
 ```shell
 # View container status. First run [sudo docker start <your_container_name_or_your_container_id>] if its status is not Up.
