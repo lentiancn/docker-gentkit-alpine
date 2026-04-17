@@ -49,7 +49,7 @@ LABEL org.opencontainers.image.title="Alpine Linux on Docker" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.source="https://github.com/lentiancn/dockerhub-gentkit-alpine" \
       org.opencontainers.image.version="3.23.4" \
-      org.opencontainers.image.created="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+      org.opencontainers.image.created=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 
 #
 # Copy resources
