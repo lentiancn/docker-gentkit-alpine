@@ -39,4 +39,5 @@ RUN set -eu && \
 Welcome to Alpine Linux ${ALPINE_VERSION} on Docker !" > /etc/motd && \
     # Create alpine filesystem \
     tar -czf /alpinefs.tar.gz \
+        --exclude='/alpinefs.tar.gz' \
         -C / .
