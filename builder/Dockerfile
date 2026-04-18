@@ -17,7 +17,7 @@ ARG ALPINE_RELEASE_FILE="unknown"
 #
 # Extract files to the root directory
 #
-ADD releases/${ALPINE_RELEASE_FILE} /
+ADD res/${ALPINE_RELEASE_FILE} /
 
 #
 # Optimize system
