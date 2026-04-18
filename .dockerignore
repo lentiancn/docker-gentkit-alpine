@@ -1,5 +1,5 @@
 *
-!releases/**
+!alpinefs.tar.gz
 !.dockerignore
 !Dockerfile
 !LICENSE
