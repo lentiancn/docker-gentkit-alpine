@@ -3,24 +3,27 @@
 [![MIT License](https://img.shields.io/github/license/lentiancn/docker-gentkit-alpine.svg?style=flat-square&label=license)](LICENSE)
 [![GitHub Release](https://img.shields.io/github/tag/lentiancn/docker-gentkit-alpine.svg?style=flat-square&label=release)](https://github.com/lentiancn/docker-gentkit-alpine/releases)
 
-A project for building Docker image based on Alpine Linux.
+A project for building Docker image based on Alpine Linux .
 
 ## Pull and run into a new container
 
 ```shell
-$ sudo docker run -it \
+docker run -it \
 --name <your_container_name> \
 gentkit/alpine:latest
 ```
 
-## Exec into a running container
+## Exec into your running container
 
 ```shell
-# View container status. First run [sudo docker start <your_container_name_or_your_container_id>] if its status is not Up.
-$ sudo docker ps -a --filter "name=<your_container_name>"
-
-$ sudo docker exec -it <your_container_name or your_container_id> /bin/sh
+docker exec -it \
+<your_container_name_or_id> \
+/bin/sh
 ```
+
+**NOTE** : Check status and start it using :
+**docker ps -a --filter "name=<your_container_name>"** and
+**docker start <your_container_name_or_id>**
 
 ## License
 
