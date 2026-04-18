@@ -12,12 +12,12 @@ FROM scratch
 #
 # Define build arguments
 #
-ARG ALPINE_RELEASE_FILE="unknown"
+ARG FS_FILE="unknown"
 
 #
 # Extract files to the root directory
 #
-ADD res/${ALPINE_RELEASE_FILE} /
+ADD ${FS_FILE} /
 
 #
 # Optimize system
