@@ -5,6 +5,13 @@
 
 A project for building Docker image based on Alpine Linux .
 
+## Tag naming convention
+
+| Image          | Tag    | Description                                              |
+|----------------|--------|----------------------------------------------------------|
+| gentkit/alpine | X.Y.Z  | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
+| gentkit/alpine | latest | Current Alpine Version from https://www.alpinelinux.org/ |
+
 ## Pull and run into a new container
 
 ```shell
