@@ -26,7 +26,7 @@ RUN set -eu && \
     # Update package index without caching \
     apk update --no-cache && \
     # Install timezone data \
-    apk add --no-cache tzdata \
+    apk add --no-cache tzdata && \
     # Clean up cache files and unnecessary documentation to reduce image size \
     rm -rf /var/cache/apk/* \
         /tmp/* \
