@@ -12,12 +12,12 @@ FROM scratch AS builder
 #
 # Define build arguments
 #
-ARG FS_FILE="unknown"
+ARG ROOTFS_FILE="unknown"
 
 #
 # Extract files to the root directory
 #
-ADD ${FS_FILE} /
+ADD rootfs/${ROOTFS_FILE} /
 
 #
 # Optimize system

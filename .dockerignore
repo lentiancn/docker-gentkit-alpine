@@ -1,5 +1,5 @@
 *
-!fs/**
+!rootfs/**
 !.dockerignore
 !Dockerfile
 !LICENSE
