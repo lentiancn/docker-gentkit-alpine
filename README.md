@@ -9,8 +9,10 @@ A project for building Docker image based on Alpine Linux .
 
 | Image          | Tag    | Description                                              |
 |----------------|--------|----------------------------------------------------------|
-| gentkit/alpine | X.Y.Z  | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
 | gentkit/alpine | latest | Current Alpine Version from https://www.alpinelinux.org/ |
+| gentkit/alpine | X      | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
+| gentkit/alpine | X.Y    | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
+| gentkit/alpine | X.Y.Z  | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
 
 ## Pull and run into a new container
 
