@@ -5,20 +5,20 @@
 
 A project for building Docker image based on Alpine Linux .
 
-## Tag naming convention
+## Tag naming standard
 
-| Image          | Tag    | Description                                              |
-|----------------|--------|----------------------------------------------------------|
-| gentkit/alpine | latest | Current Alpine Version from https://www.alpinelinux.org/ |
-| gentkit/alpine | X      | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
-| gentkit/alpine | X.Y    | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
-| gentkit/alpine | X.Y.Z  | Alpine Version X.Y.Z from https://www.alpinelinux.org/   |
+| Tag for gentkit/alpine | Description                                                   |
+|------------------------|---------------------------------------------------------------|
+| ```latest```           | Alpine Linux (Current) from https://www.alpinelinux.org/      |
+| ```X```                | Alpine Linux vX (Current) from https://www.alpinelinux.org/   |
+| ```X.Y```              | Alpine Linux vX.Y (Current) from https://www.alpinelinux.org/ |
+| ```X.Y.Z```            | Alpine Linux vX.Y.Z from https://www.alpinelinux.org/         |
 
 ## Pull and run into a new container
 
 ```shell
 docker run -it \
---name <your_container_name> \
+--name <CONTAINER_NAME> \
 gentkit/alpine:latest
 ```
 
@@ -26,13 +26,13 @@ gentkit/alpine:latest
 
 ```shell
 docker exec -it \
-<your_container_name_or_id> \
+<CONTAINER_NAME_OR_ID> \
 /bin/sh
 ```
 
 **NOTE** : Check status and start it using :
-**docker ps -a --filter "name=<your_container_name>"** and
-**docker start <your_container_name_or_id>**
+**docker ps -a --filter "name=<CONTAINER_NAME>"** and
+**docker start <CONTAINER_NAME_OR_ID>**
 
 ## License
 
