@@ -5,7 +5,7 @@
 #
 
 #
-# The base image
+# Stage 1 : Builder
 #
 FROM scratch AS builder
 
@@ -40,6 +40,9 @@ RUN set -eu && \
     echo -e "\
 Welcome to Alpine Linux ${ALPINE_VERSION} on Docker !" > /etc/motd
 
+#
+# Stage 2 : Production
+#
 FROM scratch AS production
 
 #
