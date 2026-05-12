@@ -5,14 +5,14 @@
 
 A project for building Docker image based on Alpine Linux .
 
-## Tag naming standard
+## Supported tags
 
-| Tag for gentkit/alpine | Description                                                   |
-|------------------------|---------------------------------------------------------------|
-| ```latest```           | Alpine Linux (Current) from https://www.alpinelinux.org/      |
-| ```X```                | Alpine Linux vX (Current) from https://www.alpinelinux.org/   |
-| ```X.Y```              | Alpine Linux vX.Y (Current) from https://www.alpinelinux.org/ |
-| ```X.Y.Z```            | Alpine Linux vX.Y.Z from https://www.alpinelinux.org/         |
+| Format | Tags     |
+|--------|----------|
+| latest | `latest` |
+| X      | `3`      |
+| X.Y    | `3.23`   |
+| X.Y.Z  | `3.23.4` |
 
 ## Pull and run into a new container
 
