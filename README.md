@@ -19,7 +19,7 @@ A project for building Docker image based on Alpine Linux .
 ```shell
 docker run -it \
 --name <CONTAINER_NAME> \
-gentkit/alpine:latest
+gentkit/alpine:<TAG_NAME>
 ```
 
 ## Exec into your running container
