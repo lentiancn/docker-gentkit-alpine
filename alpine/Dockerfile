@@ -1,7 +1,7 @@
 #
 # MIT License
 #
-# https://github.com/lentiancn/docker-gentkit-alpine/blob/main/LICENSE
+# https://github.com/lentiancn/docker-gentkit/blob/main/LICENSE
 #
 
 #
@@ -17,7 +17,7 @@ ARG ROOTFS_FILE="unknown"
 #
 # Extract files to the root directory
 #
-ADD rootfs/${ROOTFS_FILE} /
+ADD ${ROOTFS_FILE} /
 
 #
 # Optimize system

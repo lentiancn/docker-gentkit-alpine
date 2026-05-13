@@ -1,6 +1,4 @@
 *
-!rootfs/**
 !.dockerignore
 !Dockerfile
-!LICENSE
 !README.md

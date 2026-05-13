@@ -3,6 +3,17 @@
 [![MIT License](https://img.shields.io/github/license/lentiancn/docker-gentkit.svg?style=flat-square&label=license)](LICENSE)
 [![GitHub Release](https://img.shields.io/github/tag/lentiancn/docker-gentkit.svg?style=flat-square&label=release)](https://github.com/lentiancn/docker-gentkit/releases)
 
+A project for building Docker image based on Alpine Linux .
+
+## Supported tags
+
+| Format | Tags     |
+|--------|----------|
+| latest | `latest` |
+| X      | `3`      |
+| X.Y    | `3.23`   |
+| X.Y.Z  | `3.23.4` |
+
 ## Pull and run into a new container
 
 ```shell
@@ -25,5 +36,5 @@ docker exec -it \
 
 ## License
 
-**docker-gentkit** is licensed under
-the [MIT License](LICENSE) .
+**gentkit/alpine** is licensed under
+the [MIT License](../LICENSE) .
