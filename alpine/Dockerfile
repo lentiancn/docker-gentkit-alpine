@@ -1,7 +1,7 @@
 #
 # MIT License
 #
-# https://github.com/lentiancn/docker-gentkit/blob/main/LICENSE
+# https://github.com/lentiancn/docker-gentkit-images/blob/main/LICENSE
 #
 
 #
