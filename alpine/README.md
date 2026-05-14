@@ -4,12 +4,12 @@ A project for building Docker image based on Alpine Linux .
 
 ## Supported tags
 
-| Format | Tags     |
-|--------|----------|
-| latest | `latest` |
-| X      | `3`      |
-| X.Y    | `3.23`   |
-| X.Y.Z  | `3.23.4` |
+| Format   | Description           | Example  |
+|----------|-----------------------|----------|
+| `latest` | Latest stable version | `latest` |
+| `X`      | Major version only    | `3`      |
+| `X.Y`    | Major & minor version | `3.23`   |
+| `X.Y.Z`  | Full semantic version | `3.23.4` |
 
 ## Pull and run into a new container
 
