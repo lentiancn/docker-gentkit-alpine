@@ -28,17 +28,17 @@ RUN set -eu && \
         openssl-dev \
         bzip2-dev \
         zlib-dev \
-        #readline-dev \
+        readline-dev \
         sqlite-dev \
         wget \
         ca-certificates && \
     # Install runtime libraries (keep these for production) \
     apk add --no-cache \
         libffi \
-        libssl \
+#        libssl \
         libbz2 \
         zlib \
-        libreadline \
+#        libreadline \
         sqlite-libs
 
 #
