@@ -1,8 +1,5 @@
 # Debian Linux on Docker
 
-[![MIT License](https://img.shields.io/github/license/lentiancn/docker-gentkit-debian.svg?style=flat-square&label=license)](LICENSE)
-[![GitHub Release](https://img.shields.io/github/tag/lentiancn/docker-gentkit-debian.svg?style=flat-square&label=release)](https://github.com/lentiancn/docker-gentkit-debian/releases)
-
 A project for building Docker image based on Debian Linux .
 
 ## Supported tags
