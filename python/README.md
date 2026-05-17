@@ -4,7 +4,7 @@ A project for building Docker images of Python environment .
 
 ## Supported tags
 
-### Debian Slim Flavor
+### Debian Linux (VARIANT=slim) | [Dockerfile](debian/Dockerfile)
 
 | Format       | Description                                | Example       |
 |--------------|--------------------------------------------|---------------|
@@ -14,7 +14,7 @@ A project for building Docker images of Python environment .
 | `X.Y-slim`   | Major & minor version, Debian slim variant | `3.23-slim`   |
 | `X.Y.Z-slim` | Full semantic version, Debian slim variant | `3.23.4-slim` |
 
-### Alpine Flavor
+### Alpine Linux (VARIANT=alpine) | [Dockerfile](alpine/Dockerfile)
 
 | Format         | Description                           | Example         |
 |----------------|---------------------------------------|-----------------|
