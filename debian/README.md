@@ -19,6 +19,8 @@ A project for building Docker image based on Debian Linux .
 | `13`              | `13`          | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>` )       |
 | `13.<Minor>`      | `13.4`        | Debian 13 Trixie ( built based on official `debian:13.<Minor>` )      |
 
+**NOTE** : <Minor> refers to the actual minor version number (e.g., use 4 for Debian 13.4) .
+
 ### Debian 12 Bookworm | [Dockerfile](Dockerfile)
 
 | Tag Format        | Example         | Description                                                             |
@@ -29,6 +31,8 @@ A project for building Docker image based on Debian Linux .
 | `bookworm`        | `bookworm`      | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>` )       |
 | `12`              | `12`            | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>` )       |
 | `12.<Minor>`      | `12.13`         | Debian 12 Bookworm ( built based on official `debian:12.<Minor>` )      |
+
+**NOTE** : <Minor> refers to the actual minor version number (e.g., use 13 for Debian 12.13) .
 
 ## Pull and run into a new container
 
