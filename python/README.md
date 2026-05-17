@@ -6,22 +6,22 @@ A project for building Docker images of Python environment .
 
 ### Debian Linux (VARIANT=slim) | [Dockerfile](debian/Dockerfile)
 
-| Format       | Description                                | Example       |
-|--------------|--------------------------------------------|---------------|
-| `latest`     | Alias of the latest `slim` image           | `latest`      |
-| `slim`       | Latest Debian slim base image              | `slim`        |
-| `X-slim`     | Major version only, Debian slim variant    | `3-slim`      |
-| `X.Y-slim`   | Major & minor version, Debian slim variant | `3.23-slim`   |
-| `X.Y.Z-slim` | Full semantic version, Debian slim variant | `3.23.4-slim` |
+| Tag Format   | Example       | Description                        |
+|--------------|---------------|------------------------------------|
+| `latest`     | `latest`      | Alias of the latest slim image     |
+| `slim`       | `slim`        | Latest Debian slim base image      |
+| `X-slim`     | `3-slim`      | Major version only slim variant    |
+| `X.Y-slim`   | `3.23-slim`   | Major & minor version slim variant |
+| `X.Y.Z-slim` | `3.23.4-slim` | Full semantic version slim variant |
 
 ### Alpine Linux (VARIANT=alpine) | [Dockerfile](alpine/Dockerfile)
 
-| Format         | Description                           | Example         |
-|----------------|---------------------------------------|-----------------|
-| `alpine`       | Latest Alpine minimal base image      | `alpine`        |
-| `X-alpine`     | Major version only, Alpine variant    | `3-alpine`      |
-| `X.Y-alpine`   | Major & minor version, Alpine variant | `3.23-alpine`   |
-| `X.Y.Z-alpine` | Full semantic version, Alpine variant | `3.23.4-alpine` |
+| Tag Format     | Example         | Description                          |
+|----------------|-----------------|--------------------------------------|
+| `alpine`       | `alpine`        | Latest Alpine minimal base image     |
+| `X-alpine`     | `3-alpine`      | Major version only alpine variant    |
+| `X.Y-alpine`   | `3.23-alpine`   | Major & minor version alpine variant |
+| `X.Y.Z-alpine` | `3.23.4-alpine` | Full semantic version alpine variant |
 
 ## Pull and run into a new container
 
