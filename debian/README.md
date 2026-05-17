@@ -4,25 +4,31 @@ A project for building Docker image based on Debian Linux .
 
 ## Supported tags
 
-### Debian Linux (VARIANT=slim) | [Dockerfile](Dockerfile)
+`gentkit/debian`:<TAG_NAME>
 
-| Tag             | Description                                                                     |
-|-----------------|---------------------------------------------------------------------------------|
-| `latest`        | Alias of the latest slim image                                                  |
-| `slim`          | Latest Debian slim base image                                                   |
-| `trixie-slim`   | Debian 13 Trixie slim variant, built based on official `debian:trixie-slim`     |
-| `13-slim`       | Version alias tag, has exactly the same digest as `trixie-slim`                 |
-| `bookworm-slim` | Debian 12 Bookworm slim variant, built based on official `debian:bookworm-slim` |
-| `12-slim`       | Version alias tag, has exactly the same digest as `bookworm-slim`               |
+### Debian 13 Trixie | [Dockerfile](Dockerfile)
 
-### Debian Linux (VARIANT=standard) | [Dockerfile](Dockerfile)
+| Tag name      | Description                                                     |
+|---------------|-----------------------------------------------------------------|
+| `latest`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.y-slim` )  |
+| `slim`        | Debian 13 Trixie ( same digest as `gentkit/debian:13.y-slim` )  |
+| `trixie-slim` | Debian 13 Trixie ( same digest as `gentkit/debian:13.y-slim` )  |
+| `13-slim`     | Debian 13 Trixie ( same digest as `gentkit/debian:13.y-slim` )  |
+| `13.y-slim`   | Debian 13 Trixie ( built based on official `debian:13.y-slim` ) |
+| `trixie`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.y` )       |
+| `13`          | Debian 13 Trixie ( same digest as `gentkit/debian:13.y` )       |
+| `13.y`        | Debian 13 Trixie ( built based on official `debian:13.y` )      |
 
-| Tag        | Description                                                                    |
-|------------|--------------------------------------------------------------------------------|
-| `trixie`   | Debian 13 Trixie standard variant, built based on official `debian:trixie`     |
-| `13`       | Version alias tag, has exactly the same digest as `trixie`                     |
-| `bookworm` | Debian 12 Bookworm standard variant, built based on official `debian:bookworm` |
-| `12`       | Version alias tag, has exactly the same digest as `bookworm`                   |
+### Debian 12 Bookworm | [Dockerfile](Dockerfile)
+
+| Tag name        | Description                                                       |
+|-----------------|-------------------------------------------------------------------|
+| `bookworm-slim` | Debian 12 Bookworm ( same digest as `gentkit/debian:12.y-slim` )  |
+| `12-slim`       | Debian 12 Bookworm ( same digest as `gentkit/debian:12.y-slim` )  |
+| `12.y-slim`     | Debian 12 Bookworm ( built based on official `debian:12.y-slim` ) |
+| `bookworm`      | Debian 12 Bookworm ( same digest as `gentkit/debian:12.y` )       |
+| `12`            | Debian 12 Bookworm ( same digest as `gentkit/debian:12.y` )       |
+| `12.y`          | Debian 12 Bookworm ( built based on official `debian:12.y` )      |
 
 ## Pull and run into a new container
 
