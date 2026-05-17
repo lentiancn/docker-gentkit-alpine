@@ -8,27 +8,27 @@ A project for building Docker image based on Debian Linux .
 
 ### Debian 13 Trixie | [Dockerfile](Dockerfile)
 
-| Tag name      | Description                                                                     |
-|---------------|---------------------------------------------------------------------------------|
-| `latest`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.<y>-slim` )                |
-| `slim`        | Debian 13 Trixie ( same digest as `gentkit/debian:13.<y>-slim` )                |
-| `trixie-slim` | Debian 13 Trixie ( same digest as `gentkit/debian:13.<y>-slim` )                |
-| `13-slim`     | Debian 13 Trixie ( same digest as `gentkit/debian:13.<y>-slim` )                |
-| `13.<y>-slim` | Debian 13 Trixie ( built based on official `debian:13.<y>-slim` )               |
-| `trixie`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.<y>` )                     |
-| `13`          | Debian 13 Trixie ( same digest as `gentkit/debian:13.<y>` )                     |
-| `13.<y>`      | Debian 13 Trixie ( built based on official `debian:13.<y>` )                    |
+| Tag Format        | Example       | Description                                                           |
+|-------------------|---------------|-----------------------------------------------------------------------|
+| `latest`          | `latest`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
+| `slim`            | `slim`        | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
+| `trixie-slim`     | `trixie-slim` | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
+| `13-slim`         | `13-slim`     | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
+| `13.<Minor>-slim` | `13.4-slim`   | Debian 13 Trixie ( built based on official `debian:13.<Minor>-slim` ) |
+| `trixie`          | `trixie`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>` )       |
+| `13`              | `13`          | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>` )       |
+| `13.<Minor>`      | `13.4`        | Debian 13 Trixie ( built based on official `debian:13.<Minor>` )      |
 
 ### Debian 12 Bookworm | [Dockerfile](Dockerfile)
 
-| Tag name        | Description                                                                       |
-|-----------------|-----------------------------------------------------------------------------------|
-| `bookworm-slim` | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<y>-slim` )                |
-| `12-slim`       | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<y>-slim` )                |
-| `12.<y>-slim`   | Debian 12 Bookworm ( built based on official `debian:12.<y>-slim` )               |
-| `bookworm`      | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<y>` )                     |
-| `12`            | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<y>` )                     |
-| `12.<y>`        | Debian 12 Bookworm ( built based on official `debian:12.<y>` )                    |
+| Tag Format        | Example         | Description                                                             |
+|-------------------|-----------------|-------------------------------------------------------------------------|
+| `bookworm-slim`   | `bookworm-slim` | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>-slim` )  |
+| `12-slim`         | `12-slim`       | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>-slim` )  |
+| `12.<Minor>-slim` | `12.13-slim`    | Debian 12 Bookworm ( built based on official `debian:12.<Minor>-slim` ) |
+| `bookworm`        | `bookworm`      | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>` )       |
+| `12`              | `12`            | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>` )       |
+| `12.<Minor>`      | `12.13`         | Debian 12 Bookworm ( built based on official `debian:12.<Minor>` )      |
 
 ## Pull and run into a new container
 
