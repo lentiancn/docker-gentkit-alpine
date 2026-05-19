@@ -6,33 +6,25 @@ A project for building Docker image based on Debian Linux .
 
 `gentkit/debian`:<TAG_NAME>
 
-### Debian 13 Trixie | [Dockerfile](Dockerfile)
+[Dockerfile](Dockerfile)
 
-| Tag Format        | Example       | Description                                                           |
-|-------------------|---------------|-----------------------------------------------------------------------|
-| `latest`          | `latest`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
-| `slim`            | `slim`        | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
-| `trixie-slim`     | `trixie-slim` | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
-| `13-slim`         | `13-slim`     | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>-slim` )  |
-| `13.<Minor>-slim` | `13.4-slim`   | Debian 13 Trixie ( built based on official `debian:13.<Minor>-slim` ) |
-| `trixie`          | `trixie`      | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>` )       |
-| `13`              | `13`          | Debian 13 Trixie ( same digest as `gentkit/debian:13.<Minor>` )       |
-| `13.<Minor>`      | `13.4`        | Debian 13 Trixie ( built based on official `debian:13.<Minor>` )      |
+### Debian 12 Bookworm
 
-**NOTE** : <Minor> refers to the actual minor version number (e.g., use 4 for Debian 13.4) .
+| base TAG_NAME     | TAG_NAME                                    |
+|-------------------|---------------------------------------------|
+| `12.<MINOR>`      | `12.<MINOR>` `12` `bookworm`                |
+| `12.<MINOR>-slim` | `12.<MINOR>-slim` `12-slim` `bookworm-slim` |
 
-### Debian 12 Bookworm | [Dockerfile](Dockerfile)
+**NOTE** : Replace `12.<MINOR>` with actual version number from https://www.debian.org/releases/bookworm/, e.g. 12.13
 
-| Tag Format        | Example         | Description                                                             |
-|-------------------|-----------------|-------------------------------------------------------------------------|
-| `bookworm-slim`   | `bookworm-slim` | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>-slim` )  |
-| `12-slim`         | `12-slim`       | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>-slim` )  |
-| `12.<Minor>-slim` | `12.13-slim`    | Debian 12 Bookworm ( built based on official `debian:12.<Minor>-slim` ) |
-| `bookworm`        | `bookworm`      | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>` )       |
-| `12`              | `12`            | Debian 12 Bookworm ( same digest as `gentkit/debian:12.<Minor>` )       |
-| `12.<Minor>`      | `12.13`         | Debian 12 Bookworm ( built based on official `debian:12.<Minor>` )      |
+### Debian 13 Trixie
 
-**NOTE** : <Minor> refers to the actual minor version number (e.g., use 13 for Debian 12.13) .
+| base TAG_NAME     | TAG_NAME                                                  |
+|-------------------|-----------------------------------------------------------|
+| `13.<MINOR>`      | `13.<MINOR>` `13` `trixie`                                |
+| `13.<MINOR>-slim` | `13.<MINOR>-slim` `13-slim` `trixie-slim` `slim` `latest` |
+
+**NOTE** : Replace `13.<MINOR>` with actual version number from https://www.debian.org/releases/trixie/, e.g. 13.4
 
 ## Pull and run into a new container
 
