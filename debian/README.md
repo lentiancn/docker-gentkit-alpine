@@ -10,7 +10,7 @@ A project for building Docker image based on Debian Linux .
 
 ### Debian 12 Bookworm
 
-| base TAG_NAME     | TAG_NAME                                    |
+| Base Tag Name     | Tag Name                                    |
 |-------------------|---------------------------------------------|
 | `12.<MINOR>`      | `12.<MINOR>` `12` `bookworm`                |
 | `12.<MINOR>-slim` | `12.<MINOR>-slim` `12-slim` `bookworm-slim` |
@@ -19,7 +19,7 @@ A project for building Docker image based on Debian Linux .
 
 ### Debian 13 Trixie
 
-| base TAG_NAME     | TAG_NAME                                                  |
+| Base Tag Name     | Tag Name                                                  |
 |-------------------|-----------------------------------------------------------|
 | `13.<MINOR>`      | `13.<MINOR>` `13` `trixie`                                |
 | `13.<MINOR>-slim` | `13.<MINOR>-slim` `13-slim` `trixie-slim` `slim` `latest` |
